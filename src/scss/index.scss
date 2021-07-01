@@ -1,0 +1,431 @@
+@import "normalize";
+@import "font";
+@import "variables";
+@import "mixins";
+
+//---------------------------------------------------
+//Общие
+//---------------------------------------------------
+body{
+    font-family: 'Circe Regular';
+    line-height: 1.2;
+    color: $black;
+    font-size: 16px;
+}
+
+section{
+    padding: 5vh 0;
+}
+
+.mobile{
+    @media (min-width: 768px) {
+        display: none!important;
+    }
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+.btn{
+    display: inline-block;
+    border-radius: 10px;
+    background-image: -moz-linear-gradient( 27deg, rgb(18,188,130) 0%, rgb(191,223,44) 100%);
+    background-image: -webkit-linear-gradient( 27deg, rgb(18,188,130) 0%, rgb(191,223,44) 100%);
+    background-image: -ms-linear-gradient( 27deg, rgb(18,188,130) 0%, rgb(191,223,44) 100%);
+    max-width: 300px;
+    padding: 20px 45px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Circe ExtraBold';
+    font-size: 22px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 50px 50px 50px 50px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 50px 50px 50px 50px rgba(0,0,0,0);
+}
+.title{
+    font-size: 40px;
+    font-family: 'Circe ExtraBold';
+    text-transform: uppercase;
+    text-align: center; 
+}
+
+//---------------------------------------------------
+//Хедер
+//---------------------------------------------------
+.header{
+    background-image: url("/img/hero-sm.jpg");
+    background-color: #ea7f8c;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:  3vh 0 5vh;
+    .header__logo{
+        .logo{
+            .logo__img{
+                max-width: 186px;
+            }
+        }
+    }
+    .header__hero{
+        color: white;
+        text-align: center;
+        .hero__title{
+            font-size: 30px;
+        }
+        .hero__subtitle{
+            font-size: 20px;
+            margin-bottom: 45vh;
+        }
+        .hero__btn{
+            margin: 0 auto;
+            width: 100%;
+            box-shadow: 0px 20px 27px 1px rgba(179,61,76,0.44), 0 0 0 rgba(179,61,76,0.44);
+        }
+    }
+}
+
+//---------------------------------------------------
+//Общий стиль для слайдеров
+//---------------------------------------------------
+
+
+//---------------------------------------------------
+//Блок преимуществ
+//---------------------------------------------------
+
+.features{
+    .features__feature{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 2vh 0 5vh;
+        .feature{
+            .feature__icon{
+                border-radius: 50%;
+                background-color: rgb(255, 221, 12);
+                width: 80px;
+                height: 80px;
+                position: relative;
+                margin-left: 35%;
+                &:before{
+                    content: "";
+                    width: 70px;
+                    height: 70px;
+                    position: absolute;
+                    left: -20px;
+                    background-image: url("/img/icon/i5.svg");
+                    background-size: 70px 70px;
+                }
+            }
+            .feature__description{
+                text-align: center;
+                margin-top: 2vh;
+                text-transform: uppercase;
+                
+            }
+        }
+        .feature:nth-child(2){
+            .feature__icon{
+                &:before{
+                    background-image: url("/img/icon/i2.svg");
+                }
+            }
+        }
+        .feature:nth-child(3){
+            .feature__icon{
+                &:before{
+                    background-image: url("/img/icon/i3.svg");
+                }
+            }
+        }
+        .feature:nth-child(4){
+            .feature__icon{
+                &:before{
+                    background-image: url("/img/icon/i1.svg");
+                }
+            }
+        }
+        .feature:nth-child(5){
+            .feature__icon{
+                &:before{
+                    background-image: url("/img/icon/i4.svg");
+                }
+            }
+        }
+    }
+    .features__plus{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 2vh 0 5vh;
+        .plus{
+            width: calc( ( 100% ) / 3 );
+            .plus__description{
+                margin: 0 0 0;
+                font-size: 20px;
+                text-align: center;
+                height: 48px;
+            }
+            .plus__img{
+                background-image: url("/img/i1.png");
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 380px;
+                background-position: 50% 50%;
+                border-radius: 50%;
+                border: 33px solid white;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+            }
+            &:hover{
+                .plus__img{
+                    border: none;
+                    border-radius: 0;
+                    filter: brightness(1.1);
+                }
+            }
+        }
+        .plus:nth-child(2){
+            .plus__img{
+                background-image: url("/img/i2.png");
+            }
+        }
+        .plus:nth-child(3){
+            .plus__img{
+                background-image: url("/img/i3.png");
+            }
+        }
+    }
+
+}
+
+//---------------------------------------------------
+//Блок 
+//---------------------------------------------------
+.joining{
+    background-image: url("/img/joining.jpg");
+    background-color: #ea7f8c;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .joining__text{
+        color: white;
+        font-size: 26px;
+        text-align: center;
+    }
+    .joining__btn{
+        margin: 5vh auto 0;
+        display: block;
+        width: 100%;
+        span{
+            display: block;
+            text-transform: initial;
+            font-family: 'Circe Regular';
+            font-size: 20px;
+        }
+    }
+}
+
+//---------------------------------------------------
+//Блок отзывов
+//---------------------------------------------------
+.testimonials{
+
+   .testimonials__testimonial{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+
+        .testimonial__blockquote{
+            position: relative;
+            margin: 40px auto;
+            background-color: #fff;
+            border: 1px solid #dcdcdc;
+            border-radius: 30px;
+            padding: 25px;
+            width: 320px;
+            blockquote{
+                font-size: 14px;
+                margin: 0;
+            }
+        }
+        .testimonial__blockquote:before,
+        .testimonial__blockquote:after {
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+
+        .testimonial__blockquote:before {
+            left: 36px;
+            bottom: -30px;
+            border: 15px solid;
+            border-color: #dcdcdc transparent transparent #dcdcdc;
+        }
+
+        .testimonial__blockquote:after {
+            left: 37px;
+            bottom: -28px;
+            border: 14px solid;
+            border-color: #fff transparent transparent #fff;
+        }
+        .testimonial__author{
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            .author__photo {
+                margin-right: 25px;
+               .photo{
+                    width: 81px;
+                    height: 81px;
+                    border-radius: 50%;
+                    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+                } 
+            }
+            .author__data{
+                .data__name{
+                    font-size: 20px;
+                    font-family: 'Circe ExtraBold';
+                    text-transform: uppercase;
+                }
+                .data__age{
+                    font-size: 12px;
+                    font-family: 'Circe Light';
+                }
+            }
+        }
+   } 
+}
+
+//---------------------------------------------------
+//Блок футер
+//---------------------------------------------------
+
+.footer{
+    padding: 5vh 0;
+    background-image: url("/img/footer.jpg");
+    background-color: #ea7f8c;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .footer__copyrightText{
+        text-align: center;
+        color: white;
+        font-family: 'Circe Light';
+
+    }
+    .footer__content{
+        display: flex;
+        flex-direction: column;
+        .content__text{
+            font-size: 20px;
+            color: white;
+            margin-bottom: 2vh;
+        }
+        .content__form{
+            input{
+                width: 100%;
+            }
+            .form__input{
+                border: none;
+                border-radius: 10px;
+                height: 60px;
+                margin-bottom: 2vh;
+                text-indent: 20px;
+            }
+            .form__btn{
+                max-width: 100%;
+                border: none;
+                outline: none;
+                &:focus{
+                    border: none;
+                    outline: none;
+                }
+            }
+            small{
+                display: block;
+                color: white;
+                margin-top: 1.5vh;
+                a{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+//---------------------------------------------------
+//Адаптив
+//---------------------------------------------------
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+    .header{
+        background-image: url("/img/hero-lg.png");
+        padding:  6vh 0 10vh;
+        .header__hero{
+            text-align: left;
+            margin: 10vh 0 16vh;
+            .hero__title{
+                font-size: 54px;
+                text-align: left;
+            }
+            .hero__subtitle{
+                font-size: 24px;
+                margin-bottom: 3vh;
+            }
+            .hero__btn{
+                margin: 0;
+                width: 250px;
+            }
+        }
+    }
+    .joining{
+        .joining__btn{
+            margin: 3vh auto 0;
+            width: initial;
+        }
+    }
+    .footer{
+        padding: 10vh 0 2vh;
+        .footer__content{
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 3vh 0 15vh;
+            .content__text{
+                font-size: 24px;
+                width: 49%;
+            }
+            .content__form{
+                width: 49%;
+                .form__input{
+                    max-width: 360px;
+
+                }
+                .form__btn{
+                    max-width: 360px;
+                }
+            }
+        }
+    }
+    
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+
