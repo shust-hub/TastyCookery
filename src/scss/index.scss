@@ -10,7 +10,7 @@ html{
     font-family: 'Circe Regular';
     line-height: 1.2;
     color: $black;
-    font-size: 100%;
+    font-size: 60%;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -21,6 +21,12 @@ section{
     padding: 5vh 0;
 }
 
+.desc{
+    display: none;
+    @media (min-width: 768px) {
+        display: flex!important;
+    }
+}
 .mobile{
     @media (min-width: 768px) {
         display: none!important;
@@ -104,37 +110,28 @@ section{
 }
 
 //---------------------------------------------------
-//Общий стиль для слайдеров
-//---------------------------------------------------
-
-
-//---------------------------------------------------
 //Блок преимуществ
 //---------------------------------------------------
 
 .features{
     .features__feature{
-        display: flex;
+        padding: 2vh 0 5vh;
         justify-content: space-between;
         align-items: center;
         flex-wrap: nowrap;
-        padding: 2vh 0 5vh;
         .feature{
             .feature__icon{
                 border-radius: 50%;
-                background-color: rgb(255, 221, 12);
+                background-color: $yellow;
                 width: 80px;
                 height: 80px;
                 position: relative;
-                margin-left: 35%;
-                &:before{
-                    content: "";
-                    width: 70px;
-                    height: 70px;
+                margin: 0 auto;
+                .icon{
                     position: absolute;
-                    left: -20px;
-                    background-image: url("/img/icon/i5.svg");
-                    background-size: 70px 70px;
+                    max-height: 70px;
+                    top: 50%;
+                    transform: translate(-35%, -50%);
                 }
             }
             .feature__description{
@@ -144,43 +141,13 @@ section{
                 
             }
         }
-        .feature:nth-child(2){
-            .feature__icon{
-                &:before{
-                    background-image: url("/img/icon/i2.svg");
-                }
-            }
-        }
-        .feature:nth-child(3){
-            .feature__icon{
-                &:before{
-                    background-image: url("/img/icon/i3.svg");
-                }
-            }
-        }
-        .feature:nth-child(4){
-            .feature__icon{
-                &:before{
-                    background-image: url("/img/icon/i1.svg");
-                }
-            }
-        }
-        .feature:nth-child(5){
-            .feature__icon{
-                &:before{
-                    background-image: url("/img/icon/i4.svg");
-                }
-            }
-        }
     }
     .features__plus{
-        display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: nowrap;
         padding: 2vh 0 5vh;
         .plus{
-            width: calc( ( 100% ) / 3 );
             .plus__description{
                 margin: 0 0 0;
                 font-size: 1.5rem;
@@ -193,11 +160,7 @@ section{
                 width: 100%;
                 height: 380px;
                 background-position: 50% 50%;
-                border-radius: 50%;
-                border: 33px solid white;
-                box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                -webkit-box-sizing: border-box;
+                background-size: 80%;
             }
         }
         .plus:nth-child(2){
@@ -210,7 +173,65 @@ section{
                 background-image: url("/img/i3.png");
             }
         }
+
+        .owl-item:nth-child(2n){
+            .plus{
+                .plus__img{
+                    background-image: url("/img/i2.png");
+                }
+            }
+        }
+        .owl-item:nth-child(3n){
+            .plus{
+                .plus__img{
+                    background-image: url("/img/i3.png");
+                }
+            }
+        }
     }
+}
+
+//---------------------------------------------------
+//Общий стиль для слайдеров
+//---------------------------------------------------
+//Отключение слайдера на десктопах
+@media (min-width: 768px) {
+    .owl-carousel{
+        display: none!important;
+    }
+}
+.owl-carousel span {
+    width:10px;
+    height:10px;
+    margin:5px 7px;
+    background: $grey-color!important;
+    display:block;
+    -webkit-backface-visibility:visible;
+    -webkit-transition:opacity 200ms ease;
+    -moz-transition:opacity 200ms ease;
+    -ms-transition:opacity 200ms ease;
+    -o-transition:opacity 200ms ease;
+    transition:opacity 200ms ease;
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    border-radius:30px;
+}
+
+.owl-carousel .active span {
+    width:10px;
+    height:10px;
+    margin:5px 7px;
+    background: $yellow!important;
+    display:block;
+    -webkit-backface-visibility:visible;
+    -webkit-transition:opacity 200ms ease;
+    -moz-transition:opacity 200ms ease;
+    -ms-transition:opacity 200ms ease;
+    -o-transition:opacity 200ms ease;
+    transition:opacity 200ms ease;
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    border-radius:30px;
 }
 
 //---------------------------------------------------
@@ -218,7 +239,7 @@ section{
 //---------------------------------------------------
 .joining{
     background-image: url("/img/joining.jpg");
-    background-color: #ea7f8c;
+    background-color: $base-color;
     background-size: cover;
     background-repeat: no-repeat;
     .joining__text{
@@ -245,7 +266,6 @@ section{
 .testimonials{
 
    .testimonials__testimonial{
-    display: flex;
     justify-content: space-between;
     align-items: flex-end;
     flex-wrap: nowrap;
@@ -288,6 +308,7 @@ section{
             display: flex;
             align-items: center;
             flex-wrap: nowrap;
+            margin: 0 40px;
             .author__photo {
                 margin-right: 25px;
                .photo{
@@ -319,7 +340,7 @@ section{
 .footer{
     padding: 5vh 0;
     background-image: url("/img/footer.jpg");
-    background-color: #ea7f8c;
+    background-color: $base-color;
     background-size: cover;
     background-repeat: no-repeat;
     .footer__copyrightText{
@@ -372,9 +393,12 @@ section{
 //Адаптив
 //---------------------------------------------------
 @media (min-width: 768px) {
-    // body{
-    //     font-size: 16px;
-    // }
+    html{
+        font-size: 100%;
+    }
+    .owl-carousel{
+        display: none!important;
+    }
     .container {
       width: 750px;
     }
@@ -405,17 +429,43 @@ section{
         }
     }
     .features{
+        .feature{
+            .feature__icon{
+                margin-left: 35%;
+            }
+        }
         .features__plus{
             .plus{
+                width: calc( ( 100% ) / 3 );
                 &:hover{
                     .plus__img{
                         border: 33px solid transparent;
                     }
                 }
+                .plus__img{
+                    background-position: 50% 50%;
+                    border-radius: 50%;
+                    border: 33px solid white;
+                    box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    background-size: auto;
+                }
             }
         }
-    
     }
+    .testimonials{
+        .testimonials__testimonial{
+             .testimonial__blockquote{
+                 blockquote{
+                     font-size: 1rem;
+                 }
+             }
+             .testimonial__author{
+                 margin: 0;
+             }
+        } 
+     }
     .footer{
         padding: 10vh 0 2vh;
         .footer__content{

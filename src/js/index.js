@@ -3,9 +3,11 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import 'owl.carousel';
 
-  /*
-    Carousel
-*/
-$('.featureCarousel').owlCarousel({
-    items: 1
-})
+$(function() {
+  // Owl Carousel
+  var owl = $(".owl-carousel");
+  owl.owlCarousel({
+    items: 1,
+    margin: 10,
+    loop: true  });
+});

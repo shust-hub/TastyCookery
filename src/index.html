@@ -11,9 +11,6 @@
     document.documentElement.classList.add('js');
   </script>
 
-  <!-- <link rel="stylesheet" href="/assets/css/styles.css">
-  <link rel="stylesheet" href="/assets/css/print.css" media="print"> -->
-
   <meta name="description" content="Page description">
   <meta property="og:title" content="Unique page title - My Site">
   <meta property="og:description" content="Page description">
@@ -44,10 +41,10 @@
   <main>
     <section class="features">
       <div class="container">
-        <div class="features__feature"> 
+        <div class="features__feature desc"> 
           <div class="feature">
             <div class="feature__icon">
-  
+              <img src="img/icon/i5.svg" alt="" class="icon">
             </div>
             <div class="feature__description">
               Простые домашние <br> рецепты
@@ -55,6 +52,7 @@
           </div> 
           <div class="feature">
             <div class="feature__icon">
+              <img src="img/icon/i2.svg" alt="" class="icon">
             </div>
             <div class="feature__description">
               Статьи о готовке
@@ -62,6 +60,7 @@
           </div>
           <div class="feature">
             <div class="feature__icon">
+              <img src="img/icon/i3.svg" alt="" class="icon">
             </div>
             <div class="feature__description">
               Бесплатная книга рецептов <br> всем подписчикам
@@ -69,6 +68,7 @@
           </div>  
           <div class="feature">
             <div class="feature__icon">
+              <img src="img/icon/i1.svg" alt="" class="icon">
             </div>
             <div class="feature__description">
               Собирайте рецепты <br> в recipe box
@@ -76,6 +76,7 @@
           </div> 
           <div class="feature">
             <div class="feature__icon">
+              <img src="img/icon/i4.svg" alt="" class="icon">
             </div>
             <div class="feature__description">
               Печать рецептов
@@ -83,10 +84,10 @@
           </div> 
         </div>
 
-        <div class="features__feature featureCarousel mobile"> 
+        <div class="features__feature owl-carousel owl-theme"> 
           <div class="feature">
             <div class="feature__icon">
-  
+              <img src="img/icon/i5.svg" alt="" class="icon">
             </div>
             <div class="feature__description">
               Простые домашние <br> рецепты
@@ -94,6 +95,7 @@
           </div> 
           <div class="feature">
             <div class="feature__icon">
+              <img src="img/icon/i2.svg" alt="" class="icon">
             </div>
             <div class="feature__description">
               Статьи о готовке
@@ -101,6 +103,7 @@
           </div>
           <div class="feature">
             <div class="feature__icon">
+              <img src="img/icon/i3.svg" alt="" class="icon">
             </div>
             <div class="feature__description">
               Бесплатная книга рецептов <br> всем подписчикам
@@ -108,6 +111,7 @@
           </div>  
           <div class="feature">
             <div class="feature__icon">
+              <img src="img/icon/i1.svg" alt="" class="icon">
             </div>
             <div class="feature__description">
               Собирайте рецепты <br> в recipe box
@@ -115,18 +119,38 @@
           </div> 
           <div class="feature">
             <div class="feature__icon">
+              <img src="img/icon/i4.svg" alt="" class="icon">
             </div>
             <div class="feature__description">
               Печать рецептов
             </div>
           </div> 
         </div>
+
 
         <h2 class="features__title title">
           Почему круто быть с нами:
         </h2>
   
-        <div class="features__plus">
+        <div class="features__plus desc">
+          <div class="plus">
+            <div class="plus__img">
+            </div>
+            <p class="plus__description">Получать лучшие рецепты по разным категориям</p>
+          </div>
+          <div class="plus">
+            <div class="plus__img">
+            </div>
+           <p class="plus__description">Готовить без лишних усилий и делать из каждого дня не рутинный</p>
+          </div>
+          <div class="plus">
+            <div class="plus__img">
+            </div>
+            <p class="plus__description">Довольные члены семьи</p>
+          </div>
+        </div>
+
+        <div class="features__plus owl-carousel owl-theme">
           <div class="plus">
             <div class="plus__img">
             </div>
@@ -163,53 +187,107 @@
       <h2 class="testimonials__title title">
         Отзывы довольных пользователей
       </h2>
-      <div class="testimonials__testimonial container">
-        <div class="testimonial">
-          <div class="testimonial__blockquote">
-            <blockquote>
-              После того, как стал участником проекта Tastycookery получает много простых рецептов, о которых раньше не задумывался, стал готовить некоторые, семья рада, стали больше разговаривать во время ужина и хвалить кулинарные таланты Человека1.
-            </blockquote>
-          </div>
-          <div class="testimonial__author">
-            <div class="author__photo">
-              <img src="img/q1.png" alt="" class="photo">
+      <div class="container">
+        <div class="testimonials__testimonial desc">
+          <div class="testimonial">
+            <div class="testimonial__blockquote">
+              <blockquote>
+                После того, как стал участником проекта Tastycookery получает много простых рецептов, о которых раньше не задумывался, стал готовить некоторые, семья рада, стали больше разговаривать во время ужина и хвалить кулинарные таланты Человека1.
+              </blockquote>
             </div>
-            <div class="author__data">
-              <div class="data__name">Дейнерис</div>
-              <div class="data__age">56 лет</div>            
+            <div class="testimonial__author">
+              <div class="author__photo">
+                <img src="img/q1.png" alt="" class="photo">
+              </div>
+              <div class="author__data">
+                <div class="data__name">Дейнерис</div>
+                <div class="data__age">56 лет</div>            
+              </div>
+            </div>
+          </div>
+  
+          <div class="testimonial">
+            <div class="testimonial__blockquote">
+              <blockquote>
+                Рад, что благодаря простым рецептам может наслаждаться изысканными блюдами, тратя на приготовление 20 мин в день            </blockquote>
+            </div>
+            <div class="testimonial__author">
+              <div class="author__photo">
+                <img src="img/q2.png" alt="" class="photo">
+              </div>
+              <div class="author__data">
+                <div class="data__name">Тайвин</div>
+                <div class="data__age">43 лет</div>            
+              </div>
+            </div>
+          </div>
+  
+          <div class="testimonial">
+            <div class="testimonial__blockquote">
+              <blockquote>
+                Довольна, что благодаря рецептам с TC может на работу брать полезные обеды, что полностью отказалась от офисной неполезной еды и за 2 месяца похудела
+                на 3 кг. И очень рекомендует всем использовать рецепты с сайта            </blockquote>
+            </div>
+            <div class="testimonial__author">
+              <div class="author__photo">
+                <img src="img/q3.png" alt="" class="photo">
+              </div>
+              <div class="author__data">
+                <div class="data__name">Серсея</div>
+                <div class="data__age">56 лет</div>            
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="testimonial">
-          <div class="testimonial__blockquote">
-            <blockquote>
-              Рад, что благодаря простым рецептам может наслаждаться изысканными блюдами, тратя на приготовление 20 мин в день            </blockquote>
-          </div>
-          <div class="testimonial__author">
-            <div class="author__photo">
-              <img src="img/q2.png" alt="" class="photo">
+        <div class="testimonials__testimonial owl-carousel owl-theme">
+          <div class="testimonial">
+            <div class="testimonial__blockquote">
+              <blockquote>
+                После того, как стал участником проекта Tastycookery получает много простых рецептов, о которых раньше не задумывался, стал готовить некоторые, семья рада, стали больше разговаривать во время ужина и хвалить кулинарные таланты Человека1.
+              </blockquote>
             </div>
-            <div class="author__data">
-              <div class="data__name">Тайвин</div>
-              <div class="data__age">43 лет</div>            
+            <div class="testimonial__author">
+              <div class="author__photo">
+                <img src="img/q1.png" alt="" class="photo">
+              </div>
+              <div class="author__data">
+                <div class="data__name">Дейнерис</div>
+                <div class="data__age">56 лет</div>            
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="testimonial">
-          <div class="testimonial__blockquote">
-            <blockquote>
-              Довольна, что благодаря рецептам с TC может на работу брать полезные обеды, что полностью отказалась от офисной неполезной еды и за 2 месяца похудела
-              на 3 кг. И очень рекомендует всем использовать рецепты с сайта            </blockquote>
-          </div>
-          <div class="testimonial__author">
-            <div class="author__photo">
-              <img src="img/q3.png" alt="" class="photo">
+  
+          <div class="testimonial">
+            <div class="testimonial__blockquote">
+              <blockquote>
+                Рад, что благодаря простым рецептам может наслаждаться изысканными блюдами, тратя на приготовление 20 мин в день            </blockquote>
             </div>
-            <div class="author__data">
-              <div class="data__name">Серсея</div>
-              <div class="data__age">56 лет</div>            
+            <div class="testimonial__author">
+              <div class="author__photo">
+                <img src="img/q2.png" alt="" class="photo">
+              </div>
+              <div class="author__data">
+                <div class="data__name">Тайвин</div>
+                <div class="data__age">43 лет</div>            
+              </div>
+            </div>
+          </div>
+  
+          <div class="testimonial">
+            <div class="testimonial__blockquote">
+              <blockquote>
+                Довольна, что благодаря рецептам с TC может на работу брать полезные обеды, что полностью отказалась от офисной неполезной еды и за 2 месяца похудела
+                на 3 кг. И очень рекомендует всем использовать рецепты с сайта            </blockquote>
+            </div>
+            <div class="testimonial__author">
+              <div class="author__photo">
+                <img src="img/q3.png" alt="" class="photo">
+              </div>
+              <div class="author__data">
+                <div class="data__name">Серсея</div>
+                <div class="data__age">56 лет</div>            
+              </div>
             </div>
           </div>
         </div>
