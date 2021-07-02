@@ -6,11 +6,15 @@
 //---------------------------------------------------
 //Общие
 //---------------------------------------------------
-body{
+html{
     font-family: 'Circe Regular';
     line-height: 1.2;
     color: $black;
-    font-size: 16px;
+    font-size: 100%;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 section{
@@ -33,9 +37,9 @@ section{
 .btn{
     display: inline-block;
     border-radius: 10px;
-    background-image: -moz-linear-gradient( 27deg, rgb(18,188,130) 0%, rgb(191,223,44) 100%);
-    background-image: -webkit-linear-gradient( 27deg, rgb(18,188,130) 0%, rgb(191,223,44) 100%);
-    background-image: -ms-linear-gradient( 27deg, rgb(18,188,130) 0%, rgb(191,223,44) 100%);
+    background-image: -webkit-linear-gradient( 27deg, rgb(18,188,130),  rgb(191,223,44) );
+    background-image: -ms-linear-gradient( 27deg, rgb(18,188,130), rgb(191,223,44) );
+    background-image: linear-gradient( 27deg, rgb(18,188,130), rgb(191,223,44) );
     max-width: 300px;
     padding: 20px 45px;
     color: white;
@@ -43,12 +47,23 @@ section{
     text-align: center;
     text-decoration: none;
     font-family: 'Circe ExtraBold';
-    font-size: 22px;
+    font-size: 1.2rem;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 50px 50px 50px 50px rgba(0,0,0,0); 
     box-shadow: 0px 10px 13px -7px #000000, 50px 50px 50px 50px rgba(0,0,0,0);
+    &:hover{
+        background-image: -webkit-linear-gradient( 27deg, rgb(18,188,130) 20%,  rgb(191,223,44) );
+        background-image: -ms-linear-gradient( 27deg, rgb(18,188,130) 20%, rgb(191,223,44) );
+        background-image: linear-gradient( 27deg, rgb(18,188,130) 20%, rgb(191,223,44) );
+    }
+    &:active{
+        background-image: -ms-linear-gradient( 27deg, rgb(16, 180, 126), rgb(180, 211, 42) );
+        background-image: -webkit-linear-gradient( 27deg, rgb(16, 180, 126), rgb(180, 211, 42));
+        background-image: linear-gradient( 27deg, rgb(16, 180, 126), rgb(180, 211, 42) );
+        box-shadow: 0px 10px 13px -12px #000000, 50px 50px 50px 50px rgba(0,0,0,0)!important;
+    }
 }
 .title{
-    font-size: 40px;
+    font-size: 3rem;
     font-family: 'Circe ExtraBold';
     text-transform: uppercase;
     text-align: center; 
@@ -74,10 +89,10 @@ section{
         color: white;
         text-align: center;
         .hero__title{
-            font-size: 30px;
+            font-size: 4rem;
         }
         .hero__subtitle{
-            font-size: 20px;
+            font-size: 1.6rem;
             margin-bottom: 45vh;
         }
         .hero__btn{
@@ -168,7 +183,7 @@ section{
             width: calc( ( 100% ) / 3 );
             .plus__description{
                 margin: 0 0 0;
-                font-size: 20px;
+                font-size: 1.5rem;
                 text-align: center;
                 height: 48px;
             }
@@ -184,13 +199,6 @@ section{
                 -moz-box-sizing: border-box;
                 -webkit-box-sizing: border-box;
             }
-            &:hover{
-                .plus__img{
-                    border: none;
-                    border-radius: 0;
-                    filter: brightness(1.1);
-                }
-            }
         }
         .plus:nth-child(2){
             .plus__img{
@@ -203,7 +211,6 @@ section{
             }
         }
     }
-
 }
 
 //---------------------------------------------------
@@ -216,7 +223,7 @@ section{
     background-repeat: no-repeat;
     .joining__text{
         color: white;
-        font-size: 26px;
+        font-size: 2.1rem;
         text-align: center;
     }
     .joining__btn{
@@ -227,7 +234,7 @@ section{
             display: block;
             text-transform: initial;
             font-family: 'Circe Regular';
-            font-size: 20px;
+            font-size: 1.2rem;
         }
     }
 }
@@ -252,7 +259,7 @@ section{
             padding: 25px;
             width: 320px;
             blockquote{
-                font-size: 14px;
+                font-size: 1rem;
                 margin: 0;
             }
         }
@@ -292,12 +299,12 @@ section{
             }
             .author__data{
                 .data__name{
-                    font-size: 20px;
+                    font-size: 1.6rem;
                     font-family: 'Circe ExtraBold';
                     text-transform: uppercase;
                 }
                 .data__age{
-                    font-size: 12px;
+                    font-size: 1rem;
                     font-family: 'Circe Light';
                 }
             }
@@ -325,7 +332,7 @@ section{
         display: flex;
         flex-direction: column;
         .content__text{
-            font-size: 20px;
+            font-size: 1.6rem;
             color: white;
             margin-bottom: 2vh;
         }
@@ -365,21 +372,24 @@ section{
 //Адаптив
 //---------------------------------------------------
 @media (min-width: 768px) {
+    // body{
+    //     font-size: 16px;
+    // }
     .container {
       width: 750px;
     }
     .header{
-        background-image: url("/img/hero-lg.png");
+        background-image: url("/img/hero-lg.jpg");
         padding:  6vh 0 10vh;
         .header__hero{
             text-align: left;
             margin: 10vh 0 16vh;
             .hero__title{
-                font-size: 54px;
+                // font-size: 54px;
                 text-align: left;
             }
             .hero__subtitle{
-                font-size: 24px;
+                // font-size: 24px;
                 margin-bottom: 3vh;
             }
             .hero__btn{
@@ -394,6 +404,18 @@ section{
             width: initial;
         }
     }
+    .features{
+        .features__plus{
+            .plus{
+                &:hover{
+                    .plus__img{
+                        border: 33px solid transparent;
+                    }
+                }
+            }
+        }
+    
+    }
     .footer{
         padding: 10vh 0 2vh;
         .footer__content{
@@ -401,7 +423,7 @@ section{
             justify-content: space-between;
             margin: 3vh 0 15vh;
             .content__text{
-                font-size: 24px;
+                // font-size: 24px;
                 width: 49%;
             }
             .content__form{
