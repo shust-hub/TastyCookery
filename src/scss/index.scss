@@ -10,7 +10,7 @@ html{
     font-family: 'Circe Regular';
     line-height: 1.2;
     color: $black;
-    font-size: 60%;
+    font-size: 100%;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -21,15 +21,11 @@ section{
     padding: 5vh 0;
 }
 
+
 .desc{
     display: none;
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
         display: flex!important;
-    }
-}
-.mobile{
-    @media (min-width: 768px) {
-        display: none!important;
     }
 }
 
@@ -69,7 +65,7 @@ section{
     }
 }
 .title{
-    font-size: 3rem;
+    font-size: 1.6rem;
     font-family: 'Circe ExtraBold';
     text-transform: uppercase;
     text-align: center; 
@@ -83,6 +79,7 @@ section{
     background-color: #ea7f8c;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     padding:  3vh 0 5vh;
     .header__logo{
         .logo{
@@ -94,16 +91,19 @@ section{
     .header__hero{
         color: white;
         text-align: center;
+        margin: 4vh 0 0;
         .hero__title{
-            font-size: 4rem;
+            // font-size: 4rem;
+            font-size: 2rem;
         }
         .hero__subtitle{
-            font-size: 1.6rem;
+            // font-size: 1.6rem;
+            font-size: 1.2rem;
             margin-bottom: 45vh;
         }
         .hero__btn{
             margin: 0 auto;
-            width: 100%;
+            // width: 100%;
             box-shadow: 0px 20px 27px 1px rgba(179,61,76,0.44), 0 0 0 rgba(179,61,76,0.44);
         }
     }
@@ -146,46 +146,19 @@ section{
         justify-content: space-between;
         align-items: center;
         flex-wrap: nowrap;
-        padding: 2vh 0 5vh;
+        padding: 0 0 5vh;
         .plus{
             .plus__description{
                 margin: 0 0 0;
-                font-size: 1.5rem;
+                // font-size: 1.5rem;
+                font-size: 1.2rem;
                 text-align: center;
                 height: 48px;
             }
             .plus__img{
-                background-image: url("/img/i1.png");
-                background-repeat: no-repeat;
-                width: 100%;
-                height: 380px;
-                background-position: 50% 50%;
-                background-size: 80%;
-            }
-        }
-        .plus:nth-child(2){
-            .plus__img{
-                background-image: url("/img/i2.png");
-            }
-        }
-        .plus:nth-child(3){
-            .plus__img{
-                background-image: url("/img/i3.png");
-            }
-        }
-
-        .owl-item:nth-child(2n){
-            .plus{
-                .plus__img{
-                    background-image: url("/img/i2.png");
-                }
-            }
-        }
-        .owl-item:nth-child(3n){
-            .plus{
-                .plus__img{
-                    background-image: url("/img/i3.png");
-                }
+                width: 80%;
+                margin: auto;
+                display: block;
             }
         }
     }
@@ -195,7 +168,7 @@ section{
 //Общий стиль для слайдеров
 //---------------------------------------------------
 //Отключение слайдера на десктопах
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     .owl-carousel{
         display: none!important;
     }
@@ -244,13 +217,13 @@ section{
     background-repeat: no-repeat;
     .joining__text{
         color: white;
-        font-size: 2.1rem;
+        font-size: 1.2rem;
         text-align: center;
     }
     .joining__btn{
-        margin: 5vh auto 0;
+        margin: 6vh auto 0;
         display: block;
-        width: 100%;
+        // width: 100%;
         span{
             display: block;
             text-transform: initial;
@@ -270,6 +243,12 @@ section{
     align-items: flex-end;
     flex-wrap: nowrap;
 
+    // .testimonial{
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: flex-end;
+    // }
+
         .testimonial__blockquote{
             position: relative;
             margin: 40px auto;
@@ -277,7 +256,7 @@ section{
             border: 1px solid #dcdcdc;
             border-radius: 30px;
             padding: 25px;
-            width: 320px;
+            max-width: 320px;
             blockquote{
                 font-size: 1rem;
                 margin: 0;
@@ -320,7 +299,7 @@ section{
             }
             .author__data{
                 .data__name{
-                    font-size: 1.6rem;
+                    font-size: 1.4rem;
                     font-family: 'Circe ExtraBold';
                     text-transform: uppercase;
                 }
@@ -338,7 +317,7 @@ section{
 //---------------------------------------------------
 
 .footer{
-    padding: 5vh 0;
+    padding: 5vh 0 2vh;
     background-image: url("/img/footer.jpg");
     background-color: $base-color;
     background-size: cover;
@@ -347,13 +326,14 @@ section{
         text-align: center;
         color: white;
         font-family: 'Circe Light';
-
+        font-size: .8rem;
     }
     .footer__content{
         display: flex;
         flex-direction: column;
+        margin: 0 0 10vh;
         .content__text{
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             color: white;
             margin-bottom: 2vh;
         }
@@ -365,13 +345,13 @@ section{
                 border: none;
                 border-radius: 10px;
                 height: 60px;
-                margin-bottom: 2vh;
                 text-indent: 20px;
             }
             .form__btn{
                 max-width: 100%;
                 border: none;
                 outline: none;
+                margin-top: 3vh;
                 &:focus{
                     border: none;
                     outline: none;
@@ -385,6 +365,13 @@ section{
                     color: white;
                 }
             }
+            .form__err {
+                color: red;
+                margin: 1vh 0 -1vh;
+            }
+            .form__result p{
+                text-align: center;
+            }
         }
     }
 }
@@ -392,16 +379,20 @@ section{
 //---------------------------------------------------
 //Адаптив
 //---------------------------------------------------
+@media  (min-width: 600px) {
+
+}
 @media (min-width: 768px) {
     html{
         font-size: 100%;
     }
-    .owl-carousel{
-        display: none!important;
-    }
     .container {
       width: 750px;
     }
+    .title{
+        font-size: 1.6rem;
+    }
+
     .header{
         background-image: url("/img/hero-lg.jpg");
         padding:  6vh 0 10vh;
@@ -409,47 +400,49 @@ section{
             text-align: left;
             margin: 10vh 0 16vh;
             .hero__title{
-                // font-size: 54px;
+                font-size: 2rem;
                 text-align: left;
             }
             .hero__subtitle{
-                // font-size: 24px;
+                font-size: 1.2rem;
                 margin-bottom: 3vh;
             }
             .hero__btn{
                 margin: 0;
                 width: 250px;
             }
-        }
+        }    
     }
     .joining{
         .joining__btn{
             margin: 3vh auto 0;
             width: initial;
         }
+        .joining__text{
+            font-size: 1.2rem;
+        }
     }
     .features{
         .feature{
+            padding: 0 25px;
             .feature__icon{
                 margin-left: 35%;
+            }
+            .feature__description{
+                font-size: .8rem;
             }
         }
         .features__plus{
             .plus{
-                width: calc( ( 100% ) / 3 );
-                &:hover{
-                    .plus__img{
-                        border: 33px solid transparent;
-                    }
-                }
+
+                margin: 2vh 0 0;
                 .plus__img{
-                    background-position: 50% 50%;
-                    border-radius: 50%;
-                    border: 33px solid white;
-                    box-sizing: border-box;
-                    -moz-box-sizing: border-box;
-                    -webkit-box-sizing: border-box;
-                    background-size: auto;
+                    width: 95%;
+                    margin: auto;
+                    display: block;
+                }
+                .plus__description{
+                    font-size: 1.2rem;
                 }
             }
         }
@@ -463,18 +456,28 @@ section{
              }
              .testimonial__author{
                  margin: 0;
+                 .data__name{
+                    font-size: 1.4rem;
+                }
              }
         } 
      }
     .footer{
         padding: 10vh 0 2vh;
+        .footer__copyrightText{
+            font-size: .8rem;
+        }
         .footer__content{
             flex-direction: row;
             justify-content: space-between;
             margin: 3vh 0 15vh;
             .content__text{
-                // font-size: 24px;
+                font-size: 1.4rem;
                 width: 49%;
+                p{
+                    padding-right: 60px;
+                }
+                
             }
             .content__form{
                 width: 49%;
@@ -491,9 +494,72 @@ section{
     
   }
   @media (min-width: 992px) {
+    .owl-carousel{
+        display: none!important;
+    }
     .container {
       width: 970px;
     }
+    .title{
+        font-size: 2.6rem;
+    }
+
+    .header{
+        .header__hero{
+            .hero__title{
+                font-size: 4rem;
+            }
+            .hero__subtitle{
+               font-size: 1.6rem;
+            }
+        }    
+    }
+    .joining{
+        .joining__text{
+            font-size: 1.8rem;
+        }
+    }
+    .features{
+        .feature{
+            padding: 0;
+            .feature__description{
+                font-size: 1rem;
+            }
+        }
+        .features__plus{
+            .plus{
+                width: calc(100% / 3);
+                .plus__description{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    .testimonials{
+        .testimonials__testimonial{
+             .testimonial__blockquote{
+                 blockquote{
+                     font-size: 1rem;
+                 }
+             }
+
+        } 
+     }
+    .footer{
+        .footer__copyrightText{
+            font-size: 1rem;
+        }
+        .footer__content{
+            .content__text{
+                font-size: 1.6rem;
+                p{
+                    padding-right: 60px;
+                }
+                
+            }
+        }
+    }
+    
   }
   @media (min-width: 1200px) {
     .container {

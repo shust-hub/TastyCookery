@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
 
-  <title>Unique page title - My Site</title>
+  <title>Tasty Cookery - Простые домашние рецепты</title>
 
   <script type="module">
     document.documentElement.classList.remove('no-js');
     document.documentElement.classList.add('js');
   </script>
 
-  <meta name="description" content="Page description">
-  <meta property="og:title" content="Unique page title - My Site">
-  <meta property="og:description" content="Page description">
+  <meta name="description" content="Простые домашние рецепты">
+  <meta property="og:title" content="Tasty Cookery">
+  <meta property="og:description" content="Собирайте рецепты в recipe box">
   <meta property="og:locale" content="en_GB">
   <meta property="og:type" content="website">
 
@@ -33,7 +33,7 @@
       <div class="header__hero">
         <h1 class="hero__title title">Домашние <br> простые рецепты</h1>
         <p class="hero__subtitle">Собирайте рецепты в recipe box</p>
-        <a href="#" class="btn hero__btn">Присоединиться <br> к сообществу</a>
+        <a href="#forScroll" class="btn hero__btn scrolltoForm">Присоединиться <br> к сообществу</a>
       </div>
     </div>
   </header>
@@ -134,36 +134,30 @@
   
         <div class="features__plus desc">
           <div class="plus">
-            <div class="plus__img">
-            </div>
+            <img class="plus__img" src="img/i1.png" alt="">
             <p class="plus__description">Получать лучшие рецепты по разным категориям</p>
           </div>
           <div class="plus">
-            <div class="plus__img">
-            </div>
+            <img class="plus__img" src="img/i2.png" alt="">
            <p class="plus__description">Готовить без лишних усилий и делать из каждого дня не рутинный</p>
           </div>
           <div class="plus">
-            <div class="plus__img">
-            </div>
+            <img class="plus__img" src="img/i3.png" style="margin-top: -15px;" alt="">
             <p class="plus__description">Довольные члены семьи</p>
           </div>
         </div>
 
         <div class="features__plus owl-carousel owl-theme">
           <div class="plus">
-            <div class="plus__img">
-            </div>
+            <img class="plus__img" src="img/i1.png" alt="">
             <p class="plus__description">Получать лучшие рецепты по разным категориям</p>
           </div>
           <div class="plus">
-            <div class="plus__img">
-            </div>
+            <img class="plus__img" src="img/i2.png" alt="">
            <p class="plus__description">Готовить без лишних усилий и делать из каждого дня не рутинный</p>
           </div>
           <div class="plus">
-            <div class="plus__img">
-            </div>
+            <img class="plus__img"  src="img/i3.png" alt="">
             <p class="plus__description">Довольные члены семьи</p>
           </div>
         </div>
@@ -176,7 +170,7 @@
           Удобно получать на емейл уникальные проверенные рецепты, <br>
               которые дружная команда Tastycookery попробовала сама и рекомендует
         </p>
-        <a href="" class="joining__btn btn">
+        <a href="#forScroll" class="joining__btn btn scrolltoForm">
           <span>Стать членом семьи Tastycookery</span>
           бесплатно
         </a>        
@@ -240,7 +234,7 @@
           </div>
         </div>
 
-        <div class="testimonials__testimonial owl-carousel owl-theme">
+        <div class="testimonials__testimonial testimonial-carousel owl-carousel owl-theme">
           <div class="testimonial">
             <div class="testimonial__blockquote">
               <blockquote>
@@ -297,7 +291,7 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer__content">
+      <div class="footer__content" id="forScroll">
         <div class="content__text">
           <p>
             Sign up to receive daily manually selected recipes, delicious weekly articles,
@@ -308,10 +302,12 @@
     
         <div class="content__form">
           <form action="" id="contactUs" class="form">
-            <input type="text" placeholder="Enter your email" class="form__input">
+            <input type="text" required placeholder="Enter your email" class="form__input">
+            <div class="form__err"></div>
             <input type="submit" value="sign up" class="btn form__btn">
             <small>By signing up I agree to the terms of the <a href="#">Privacy Policy</a></small>
           </form>
+          <div class="form__result"></div>
         </div>
       </div>
   
