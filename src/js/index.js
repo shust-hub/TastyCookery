@@ -7,28 +7,34 @@ $(function() {
   // Owl Carousel
   var owl = $(".owl-carousel");
   owl.owlCarousel({
-    items: 1,
-    margin: 10,
+    margin: 5,
     loop: true,
-    600: {
-      items: 2
+    items: 1,
+    responsive: {
+      0 : {
+        items: 1
+      },
+      600: {
+        items: 2
+      }
     }
   });
 
     var testimonial = $(".testimonial-carousel");
     testimonial.owlCarousel({
-      items: 1,
-      margin: 10,
+      margin: 5,
       loop: true,
-      0 : {
-        items: 1
-      },
-    768 : {
-      items: 2
-    }
+      items: 2,
+      responsive: {
+        0 : {
+          items: 1
+        },
+        768 : {
+          items: 2
+        }
+      }
     });
-});
-
+  });
 
 $(document).ready(function() {
 //Плавный скроллинг
