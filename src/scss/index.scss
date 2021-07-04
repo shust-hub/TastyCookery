@@ -75,7 +75,7 @@ section{
 //Хедер
 //---------------------------------------------------
 .header{
-    background-image: url("/img/hero-sm.jpg");
+    background-image: url("../img/hero-sm.jpg");
     background-color: #ea7f8c;
     background-size: cover;
     background-repeat: no-repeat;
@@ -211,7 +211,7 @@ section{
 //Блок 
 //---------------------------------------------------
 .joining{
-    background-image: url("/img/joining.jpg");
+    background-image: url("../img/joining.jpg");
     background-color: $base-color;
     background-size: cover;
     background-repeat: no-repeat;
@@ -318,7 +318,7 @@ section{
 
 .footer{
     padding: 5vh 0 2vh;
-    background-image: url("/img/footer.jpg");
+    background-image: url("../img/footer.jpg");
     background-color: $base-color;
     background-size: cover;
     background-repeat: no-repeat;
@@ -394,7 +394,7 @@ section{
     }
 
     .header{
-        background-image: url("/img/hero-lg.jpg");
+        background-image: url("../img/hero-lg.jpg");
         padding:  6vh 0 10vh;
         .header__hero{
             text-align: left;
